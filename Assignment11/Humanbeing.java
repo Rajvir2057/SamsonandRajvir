@@ -28,27 +28,32 @@ public class Humanbeing {
         System.out.println(name+" is walking");
         }
     public void Communicating(){
-        System.out.println("This person"+ name +" is communicating about their: ");
+        System.out.println( name +" is communicating about their: ");
 
-        System.out.println(nationality);
-        System.out.println(gender);
-        System.out.println(age);
+        System.out.println("Nationality : " + nationality);
+        System.out.println("Gender : " +gender);
+        System.out.println("Age : " + age);
     }
     public void talking(){
-        System.out.println(name+ " is talking about his phone number:" + phoneNumber);
+        System.out.println(name+ " is talking about his/her phone number:" + phoneNumber);
     }
 
     // forming objects from the main method..
     public static void main(String[] args) {
         // first object;
         Humanbeing person = new Humanbeing();
+        person.walking();
+        person.Communicating();
+        person.talking();
 
+        System.out.println("\n");
         // second object;
-        Humanbeing person2 = new Humanbeing("Samson", "sudanese", "male", 20, 0763205644);
+        Humanbeing person2 = new Humanbeing("Rajvir", "Ugandan", "female", 19, 076325644);
         
         // call the methods;
         person2.walking();
         person2.Communicating();
         person2.talking();
+    }
 
 } 
