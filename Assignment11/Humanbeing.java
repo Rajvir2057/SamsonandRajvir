@@ -23,25 +23,37 @@ public class Humanbeing {
         this.age = a;
         this.phoneNumber = p;
     }
-
-        //Forming three(3)methods
-        public void walking(){
-            System.out.println(name+" is walking");
+    //Forming three(3)methods
+    public void walking(){
+        System.out.println(name+" is walking");
         }
-        public void Communicating(){
-            System.out.println("This person"+name+" is communicating about their: ");
+    public void Communicating(){
+        System.out.println( name +" is communicating about their: ");
 
-            System.out.println(nationality);
-            System.out.println(gender);
-            System.out.println(age);
-        }
-        public void talking(){
-            System.out.println();
- 
-          
-        }
-    
-    
+        System.out.println("Nationality : " + nationality);
+        System.out.println("Gender : " +gender);
+        System.out.println("Age : " + age);
+    }
+    public void talking(){
+        System.out.println(name+ " is talking about his/her phone number:" + phoneNumber);
+    }
 
+    // forming objects from the main method..
+    public static void main(String[] args) {
+        // first object;
+        Humanbeing person = new Humanbeing();
+        person.walking();
+        person.Communicating();
+        person.talking();
 
+        System.out.println("\n");
+        // second object;
+        Humanbeing person2 = new Humanbeing("Rajvir", "Ugandan", "female", 19, 076325644);
+        
+        // call the methods;
+        person2.walking();
+        person2.Communicating();
+        person2.talking();
+    }
 
+} 
